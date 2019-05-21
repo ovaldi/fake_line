@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.v7lin.fakeline">
+
+    <application>
+        <provider
+            android:name=".content.FakeLineFileProvider"
+            android:authorities="${applicationId}.content.FakeWhatsappFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fake_line_file_paths" />
+        </provider>
+    </application>
+</manifest>
